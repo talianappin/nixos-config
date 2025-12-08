@@ -12,6 +12,7 @@
         slurp
         grim
         fzf
+        imagemagick
       ];
     };
 }

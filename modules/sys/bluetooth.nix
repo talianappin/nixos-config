@@ -1,5 +1,16 @@
 {
   sys.bluetooth = {
-    nixos.services.blueman.enable = true;
+    nixos.hardware.bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+      settings = {
+        General = {
+          Experimental = true;
+        };
+        Policy = {
+          AutoEnable = true;
+        };
+      };
+    };
   };
 }

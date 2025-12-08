@@ -5,6 +5,7 @@
       <den/primary-user>
       (<den/user-shell> "fish")
 
+      <sys/theme/johnny>
 #      <sys/dots/talianappin>
 
       <apps/shell>

@@ -21,7 +21,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hjem.url = "github:feel-co/hjem";
+#    hjem.url = "github:feel-co/hjem";
+    nix-colors = {
+      url = "github:misterio77/nix-colors";
+      inputs.nixpkgs-lib.follows = "flake-parts/nixpkgs-lib";
+    };
   };
 }
 
