@@ -8,6 +8,12 @@ let
       keyFile = "/var/lib/secrets/sops/age/keys.txt";
       generateKey = true;
     };
+
+    secrets = {
+      "private_keys/talianappin" ={
+        path = "/home/talianappin/.ssh/id_ed_25519";
+      };
+    };
   };
 in
 {
