@@ -1,21 +1,19 @@
 { den, sys, __findFile, config, inputs, pkgs, ... }:
 {
-  den.hosts.x86_64-linux.johnny = { };
-  den.aspects.johnny = {
+  den.hosts.x86_64-linux.gyro = { };
+  den.aspects.gyro = {
     includes = [
-      <sys/devices/desktop>
+      <sys/devices/server>
     ];
 
     nixos = {
       facter.reportPath = ./facter.json;
       
       imports = with inputs; [
-        nixos-hardware.nixosModules.common-cpu-amd
-        nixos-hardware.nixosModules.common-gpu-amd
+        nixos-hardware.nixosModules.common-cpu-intel
+        nixos-hardware.nixosModules.common-gpu-nvidia
         nixos-hardware.nixosModules.common-pc-ssd
       ];
-
-      hardware.amdgpu.opencl.enable = true;
     };
   };
 }
