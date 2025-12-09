@@ -7,6 +7,7 @@
 
       <sys/theme/johnny>
 #      <sys/dots/talianappin>
+      <sys/secrets>
 
       <apps/shell>
       <apps/utils>
