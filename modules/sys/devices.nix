@@ -14,13 +14,14 @@
     
     desktop = den.lib.parametric.atLeast {
       includes = [
-        <sys/base>
+        <sys/devices/base>
         <sys/wayland/niri>
       ];
     };
 
     server = den.lib.parametric.atLeast {
       includes = [
+        <sys/devices/base>
         <sys/networking/server>
       ];
     };
