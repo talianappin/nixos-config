@@ -1,4 +1,4 @@
-{ inputs, lib, ... }:
+\{ inputs, lib, ... }:
 let
   colorJohnny = {
     slug = "johnny";

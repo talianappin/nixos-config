@@ -11,7 +11,7 @@ let
 
     secrets = {
       "private_keys/talianappin" ={
-        path = "/home/talianappin/.ssh/id_ed_25519";
+        path = ({ user, ... }: {"/home/${user.name}/.ssh/id_ed_25519}"});
       };
     };
   };
