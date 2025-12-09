@@ -1,6 +1,7 @@
 keys:
   - &users:
     - &talianappin age13pajknc20ty7rlxtkv9ka7gemz0nkcce382e6j0hq6cy3x46wcrqa8mc4m
+    - &euclid age1qwg9nsf4mcds53pqjjr4sxnrnv07yf5u90uqhxusrf6tuenqr9rqp76yj9
   - &hosts:
     - &johnny age159m87jelhw8r95ccgt439v7hu9qq6pmlxdsd86cm55378yse0qmq28ldjk
 creation_rules:
@@ -9,3 +10,4 @@ creation_rules:
       - age:
         - *talianappin
         - *johnny
+        - *euclid
