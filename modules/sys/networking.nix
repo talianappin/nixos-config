@@ -14,11 +14,11 @@
       };
     };
     server = den.lib.parametric {
-      includes = [ sys.networking.base ];
+      includes = [ sys.networking._.base ];
       nixos =
       { config, pkgs, ... }:
       {
-        networking = {
+        networking.firewall = {
           trustedInterfaces = [ "tailscale0" ];
           allowedUDPPorts = [ config.services.tailscale.port ];
         };

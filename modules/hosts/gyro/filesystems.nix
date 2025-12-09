@@ -1,5 +1,5 @@
 {
-  den.aspects.johnny.nixos = {
+  den.aspects.gyro.nixos = {
     fileSystems."/" = {
       device = "/dev/disk/by-label/NIXROOT";
       fsType = "btrfs";

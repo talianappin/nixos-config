@@ -8,6 +8,14 @@
 
     nixos = {
       facter.reportPath = ./facter.json;
+
+      hardware.nvidia = {
+        open = true;
+        prime = {
+          intelBusId = "PCI:0:2:0";
+          nvidiaBusId = "PCI:1:0:0";
+        };
+      };
       
       imports = with inputs; [
         nixos-hardware.nixosModules.common-cpu-intel
