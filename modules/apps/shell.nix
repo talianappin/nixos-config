@@ -13,9 +13,11 @@
             enableBashIntegration = true;
           };
  
-          emacs = {
+         neovim = {
             enable = true;
-            package = pkgs.emacs;
+            plugins = with pkgs.vimPlugsins; [
+              
+            ];
           };
 
           foot = {

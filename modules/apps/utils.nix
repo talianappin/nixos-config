@@ -13,6 +13,12 @@
         grim
         fzf
         imagemagick
+        unzip
+        protontricks
+        protonup-qt
+        steamtinkerlaunch
+        p7zip
+        rar
       ];
     };
 }

@@ -9,6 +9,12 @@
       pavucontrol
       nicotine-plus
       droidcam
+      spotify
+      nautilus #temp
+      parsec-bin
+      obsidian
+      freecad
+      qbittorrent
     ];
   };
 }

@@ -8,6 +8,8 @@
         yazi
         bottom
         astroterm
+        gurk-rs
+        neomutt
       ];
     };
 }

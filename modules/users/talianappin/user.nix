@@ -14,6 +14,8 @@
       <apps/steam>
       <apps/gui>
       <apps/tui>
+      <apps/games>
+      <apps/nvim>
     ];
 
     nixos =

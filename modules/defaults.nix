@@ -21,6 +21,15 @@
         time.timeZone = "Europe/Warsaw";
 
         system.stateVersion = "26.05";
+
+        services.xserver.xkb = {
+          layout = "pl";
+          variant = "";
+        };
+        console.keyMap = "pl";
+        
+        home-manager.useUserPackages = true;
+        home-manager.useGlobalPkgs = true;
       };
     homeManager = {
       programs.home-manager.enable = true;
@@ -30,5 +39,10 @@
         sessionVariables.NIXPKGS_ALLOW_UNFREE = "1"; 
       };
     };  
+    nix = {
+      binaryCachePublicKeys = [ "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ=" ];
+      binaryCaches = [ "https://cache.iog.io" ];
+      settings.experimental-features = [ "nix-command" "flakes" ];
+    };
   };
 }

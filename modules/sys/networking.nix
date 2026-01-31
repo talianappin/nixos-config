@@ -9,32 +9,50 @@
           networkmanager.enable = true;
           firewall.enable = true;
         };
-        services.tailscale.enable = true;
-        systemd.services.tailscaled.wantedBy = lib.mkForce [];
+        services.mullvad-vpn.enable = true;
       };
+      homeManager.programs.mullvad-vpn.enable = true;
     };
     server = den.lib.parametric {
       includes = [ sys.networking._.base ];
       nixos =
       { config, pkgs, ... }:
       {
-        networking.firewall = {
-          trustedInterfaces = [ "tailscale0" ];
-          allowedUDPPorts = [ config.services.tailscale.port ];
+        sops.secrets.udpport = {};
+
+        networking = {
+          firewall.allowedUDPPorts = [ config.sops.secrets.udpport ];
+          useNetworkd = true;
         };
-        systemd.services.tailscale-autoconnect = {
-          description = "Automatic connection to Tailscale";
+        
+        systemd.network = {
+          enable = true;
+          
+          networks."wg-server" = {
+            matchConfig.Name = "wg0";
+            adress = [
+              "fd31:bf08:57cb::7/128"
+              "192.168.26.7/32"
+            ];
+          };
+          
+          netdevs."wg-server" = {
+            netdevConfig = {
+              Kind = "wireguard";
+              Name = "wg0";
+            };
 
-          after = [ "network-pre.target" "tailscale.service" ];
-          wants = [ "network-pre.target" "tailscale.service" ];
-          wantedBy = [ "multi-user.target" ];
-
-          serviceConfig.Type = "oneshot";
-
-          script = with pkgs; ''
-            sleep 2
-            ${tailscale}/bin/tailscale up --advertise-exit-node
-          '';
+            wireguardConfig = {
+              ListenPort = config.sops.secrets.udpport;
+              PrivateKeyFile = config.sops.secrets.wg-key.path;
+              RouteTable = "main";
+              FirewallMark = 42;
+            };
+            wireguardPeers = [
+              {
+              }
+            ];
+          };
         };
       };
     };
