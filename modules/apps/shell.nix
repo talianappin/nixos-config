@@ -12,13 +12,6 @@
             enableFishIntegration = true;
             enableBashIntegration = true;
           };
- 
-         neovim = {
-            enable = true;
-            plugins = with pkgs.vimPlugsins; [
-              
-            ];
-          };
 
           foot = {
             enable = true;
@@ -30,35 +23,28 @@
                 dpi-aware = "yes";
               };
               colors = {
-                foreground = "${config.colorScheme.palette.base07}";
-                background = "${config.colorScheme.palette.base00}";
+		background = 	"fcf9f7"; # BASE00	white
+		foreground = 	"000000"; # BASE05	black
 
-                # normal
-                regular0 = "${config.colorScheme.palette.base00}";
-                regular1 = "${config.colorScheme.palette.base01}";
-                regular2 = "${config.colorScheme.palette.base02}";
-                regular3 = "${config.colorScheme.palette.base03}";
-                regular4 = "${config.colorScheme.palette.base04}";
-                regular5 = "${config.colorScheme.palette.base05}";
-                regular6 = "${config.colorScheme.palette.base06}";
-                regular7 = "${config.colorScheme.palette.base07}";
+		# normal
+		regular0 = 	"000000"; # BASE00	black
+		regular1 =	"fface9"; # BASE08	pink
+		regular2 =	"45be30"; # BASE0B	green
+		regular3 =	"fed134"; # BASE0A	yellow
+		regular4 =	"5a7ebf"; # BASE0D	blue
+		regular5 =	"997cba"; # BASE0E	purple
+		regular6 =	"b5e7ff"; # BASE0C	sky
+		regular7 =	"fcf9f7"; # BASE05	white
 
-                # bright
-                bright0 = "${config.colorScheme.palette.base08}";
-                bright1 = "${config.colorScheme.palette.base09}";
-                bright2 = "${config.colorScheme.palette.base0A}";
-                bright3 = "${config.colorScheme.palette.base0B}";
-                bright4 = "${config.colorScheme.palette.base0C}";
-                bright5 = "${config.colorScheme.palette.base0D}";
-                bright6 = "${config.colorScheme.palette.base0E}";
-                bright7 = "${config.colorScheme.palette.base0F}";
-
-                # misc
-                selection-background = "${config.colorScheme.palette.base07}";
-                selection-foreground = "${config.colorScheme.palette.base00}";
-                urls = "${config.colorScheme.palette.base0C}";
-#                jump-labels = "#${config.colorScheme.palette.base00}" "#${config.colorScheme.palette.base03}";
-#                scrollback-indicator = "#${config.colorScheme.palette.base00}" "#${config.colorScheme.palette.base0C}";
+		# bright
+		bright0 =	"000000"; # BASE03	bright black
+		bright1 =	"fface9"; # BASE09	bright pink
+		bright2 =	"45be30"; # BASE01	bright green
+		bright3 =	"fed134"; # BASE02	bright yellow
+		bright4 =	"5a7ebf"; # BASE04	bright blue
+		bright5 = 	"997cba"; # BASE06	bright purple
+		bright6 =	"b5e7ff"; # BASE0F	bright sky
+		bright7 =	"fcf9f7"; # BASE07	bright white
               };
             };
           };

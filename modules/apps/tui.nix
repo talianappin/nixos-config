@@ -10,6 +10,7 @@
         astroterm
         gurk-rs
         neomutt
+	cava
       ];
     };
 }

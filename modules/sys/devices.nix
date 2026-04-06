@@ -7,9 +7,8 @@
         <sys/networking/base>
         <sys/bluetooth>
         <sys/audio>
-#        <sys/secrets>
         <sys/fonts>
-        <sys/ios>
+        <sys/usb>
       ];
     };
     

@@ -1,14 +1,15 @@
-{ inputs, ... }:
 {
-  apps.nvim.homeManager.programs.neovim =
+  apps.nvim.homeManager =
   { pkgs, ... }:
   {
-    enable = true;
-    defaultEditor = true;
-    plugins = with pkgs.vimPlugins; [
-      nvim-lspconfig
-      nvim-treesitter.withAllGrammars
-      haskell-nvim-tools
-    ];
+    programs.neovim = {
+      enable = true;
+      defaultEditor = true;
+      plugins = with pkgs.vimPlugins; [
+        nvim-lspconfig
+        nvim-treesitter.withAllGrammars
+        haskell-tools-nvim
+      ];
+    };
   };
 }

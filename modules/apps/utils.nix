@@ -19,6 +19,8 @@
         steamtinkerlaunch
         p7zip
         rar
+	exfat
+	usbutils
       ];
     };
 }

@@ -5,22 +5,22 @@ let
     name = "Johnny";
     author = "Talia Napierala (https://github.com/talianappin)";
     palette = {
-      base00 = "1F1F1F";
-      base01 = "8d96b6";
-      base02 = "8b8aa3";
-      base03 = "a8b3d5";
-      base04 = "ae9e7a";
-      base05 = "6f878b";
-      base06 = "bfd1e5";
-      base07 = "fcf9f7";
-      base08 = "587495";
-      base09 = "b2b1d3";
-      base0A = "e9d6b0";
-      base0B = "b89152";
-      base0C = "667b97";
-      base0D = "8a91d4";
-      base0E = "e2ca98";
-      base0F = "e3e0d4";
+      base00 = "fcf9f7"; # ++++   
+      base01 = "edebe9"; # +++
+      base02 = "dfdddb"; # ++
+      base03 = "d1cfce"; # +
+      base04 = "33373a"; # -
+      base05 = "272c2f"; # --
+      base06 = "1c2125"; # ---
+      base07 = "11171b"; # ----
+      base08 = "de69a5"; # johnny	pink
+      base09 = "c6961a"; # johhny	orange
+      base0A = "fed134"; # johnny	yellow
+      base0B = "45be30"; # gyro	green
+      base0C = "5a71a3"; # johnny	old blue	
+      base0D = "50c0fc"; # johhny	blue
+      base0E = "8261ba"; # gyro 	purple
+      base0F = "F03D2D"; # johnny	red
     };
   };
 in
