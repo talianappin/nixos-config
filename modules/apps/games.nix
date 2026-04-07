@@ -4,9 +4,8 @@
   { pkgs, ... }:
   {
     home.packages = with pkgs; [
-      prismlauncher
       mangohud
-      modrinth-app
+      deadlock-mod-manager
     ];
   };
 }

@@ -7,15 +7,15 @@
         packages = with pkgs; [
           inter
           aleo-fonts
-          nerd-fonts.mononoki
-          openmoji-color
+          nerd-fonts.3270
+	  openmoji-color
         ];
         enableDefaultPackages = true;
         fontDir.enable = true;
         fontconfig.defaultFonts = {
           sansSerif = ["Inter"];
           serif = ["Aleo"];
-          monospace = ["Mononoki Nerd Font"];
+          monospace = ["3270 Nerd Font"];
           emoji = ["OpenMoji Color"];
         };
       };

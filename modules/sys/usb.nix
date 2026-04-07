@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   sys.usb = {
-    nixos.services.udisk2 = {
+    nixos.services.udisks2 = {
       enable = true;
     };
 

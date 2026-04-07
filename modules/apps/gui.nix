@@ -18,7 +18,6 @@
       discord
       libresprite
       signal-desktop
-      lutris
       libreoffice-qt
     ];
   };

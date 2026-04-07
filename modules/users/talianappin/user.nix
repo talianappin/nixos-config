@@ -5,7 +5,7 @@
       <den/primary-user>
       (<den/user-shell> "fish")
 
-      <sys/theme/johnny>
+      <sys/theme/beaver>
 #      <sys/dots/talianappin>
       <sys/secrets>
 

@@ -11,6 +11,7 @@
       {
         imports = with inputs; [
           nixos-facter-modules.nixosModules.facter
+	  niri.nixosModules.niri
         ];
 
         nixpkgs.config.allowUnfree = true;
