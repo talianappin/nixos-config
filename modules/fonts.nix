@@ -7,7 +7,7 @@
         packages = with pkgs; [
           inter
           aleo-fonts
-          nerd-fonts.3270
+          nerd-fonts._3270
 	  openmoji-color
         ];
         enableDefaultPackages = true;

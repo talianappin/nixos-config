@@ -66,8 +66,8 @@
 	    focus-ring = {
 	      enable = true;
               width = 4;
-	      active-color = "#${config.colorScheme.palette.base02}";
-	      urgent-color = "#${config.colorScheme.palette.base01}";
+	      active.color = "#${config.colorScheme.palette.base02}";
+	      urgent.color = "#${config.colorScheme.palette.base01}";
 	    };
 	    
 	  };
@@ -81,13 +81,13 @@
             "Mod+Up".action.focus-workspace-up = [];
             "Mod+Down".action.focus-workspace-down = [];
 
-	    "Mod+Ctrl+Left".action.move-window-left = [];
-            "Mod+Ctrl+Right".action.move-window-right = [];
-            "Mod+Ctrl+Up".action.move-window-up = [];
-            "Mod+Ctrl+Down".action.move-window-down = [];
+	    "Mod+Ctrl+Left".action.move-column-left = [];
+            "Mod+Ctrl+Right".action.move-column-right = [];
+            "Mod+Ctrl+Up".action.move-column-to-workspace-up = [];
+            "Mod+Ctrl+Down".action.move-column-to-workspace-down = [];
 
 	    "Mod+F".action.maximize-column = [];
-	    "Mod+Ctrl+F".action.maximize-window-to-edges = [];
+#	    "Mod+Ctrl+F".action.maximize-window-to-edges = [];  v25.11 feature (on v25.08)
 	    "Mod+Shift+F".action.fullscreen-window = [];
           };
         };
