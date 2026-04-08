@@ -19,6 +19,7 @@
       libresprite
       signal-desktop
       libreoffice-qt
+      fuzzel
     ];
   };
 }

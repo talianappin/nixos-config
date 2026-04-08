@@ -14,7 +14,7 @@
               main = {
                 term = "xterm-256color";
 
-                font = "3270 Nerd Font:size=16";
+                font = "3270 Nerd Font:size=18";
                 dpi-aware = "yes";
               };
               colors = {
