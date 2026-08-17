@@ -1,6 +1,8 @@
 { den, sys, __findFile, inputs, ... }:
 {
-  den.hosts.x86_64-linux.johnny = { };
+  den.hosts.x86_64-linux.johnny = {
+    users.talianappin.classes = [ "homeManager" ];
+  };
   den.aspects.johnny = {
     includes = [
       <sys/devices/desktop>

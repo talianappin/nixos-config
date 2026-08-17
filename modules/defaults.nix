@@ -2,9 +2,8 @@
 {
   den.default = {
     includes = [
-      <den/home-manager>
       <den/define-user>
-      ({ host, ... }: {${host.class}.networking.hostName = host.name;})
+      <den/hostname> 
     ];
     nixos =
       { pkgs, lib, ... }:
