@@ -4,7 +4,6 @@
   { pkgs, ... }:
   {
     home.packages = with pkgs; [
-      # vesktop
       librewolf
       pavucontrol
       nicotine-plus
@@ -15,11 +14,12 @@
       obsidian
       freecad
       qbittorrent
-      discord
       libresprite
       signal-desktop
       libreoffice-qt
       fuzzel
+      bisq2
+      heroic
     ];
   };
 }

@@ -31,6 +31,16 @@
         
         home-manager.useUserPackages = true;
         home-manager.useGlobalPkgs = true;
+
+	nix = {
+          settings = {
+	    keep-outputs = true;
+            keep-derivations = true;
+	    auto-optimise-store = true;
+	    experimental-features = [ "nix-command" "flakes" ];
+	  };
+          package = pkgs.lixPackageSets.stable.lix;
+        };
       };
     homeManager = {
       programs.home-manager.enable = true;
@@ -40,10 +50,5 @@
         sessionVariables.NIXPKGS_ALLOW_UNFREE = "1"; 
       };
     };  
-    nix = {
-      binaryCachePublicKeys = [ "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ=" ];
-      binaryCaches = [ "https://cache.iog.io" ];
-      settings.experimental-features = [ "nix-command" "flakes" ];
-    };
   };
 }

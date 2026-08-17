@@ -16,6 +16,7 @@
       <apps/tui>
       <apps/games>
       <apps/nvim>
+      <apps/vesktop>
     ];
 
     nixos =

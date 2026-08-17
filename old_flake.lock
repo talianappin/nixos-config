@@ -86,11 +86,11 @@
     },
     "import-tree": {
       "locked": {
-        "lastModified": 1773554199,
-        "narHash": "sha256-6apV5N1F5tTD8JY9AUGnkWmy56HqDPn4MNFRsq4Rg+s=",
+        "lastModified": 1763762820,
+        "narHash": "sha256-ZvYKbFib3AEwiNMLsejb/CWs/OL/srFQ8AogkebEPF0=",
         "ref": "refs/heads/main",
-        "rev": "c6ebc59c85ee54cfb68163d06d1a3149ce0fe431",
-        "revCount": 94,
+        "rev": "3c23749d8013ec6daa1d7255057590e9ca726646",
+        "revCount": 87,
         "type": "git",
         "url": "https://tangled.org/oeiuwq.com/import-tree"
       },

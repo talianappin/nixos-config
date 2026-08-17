@@ -6,6 +6,7 @@
     home.packages = with pkgs; [
       mangohud
       deadlock-mod-manager
+      prismlauncher
     ];
   };
 }

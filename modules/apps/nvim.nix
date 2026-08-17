@@ -5,11 +5,11 @@
     programs.neovim = {
       enable = true;
       defaultEditor = true;
-      plugins = with pkgs.vimPlugins; [
-        nvim-lspconfig
-        nvim-treesitter.withAllGrammars
-        haskell-tools-nvim
-      ];
+#      plugins = with pkgs.vimPlugins; [
+#        nvim-lspconfig
+#        nvim-treesitter.withAllGrammars
+#        haskell-tools-nvim
+#      ];
     };
   };
 }
