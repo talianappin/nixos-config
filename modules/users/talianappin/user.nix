@@ -16,11 +16,11 @@
       <apps/tui>
       <apps/games>
       <apps/nvim>
-      <apps/vesktop>
+      <apps/yazi>
     ];
 
     nixos =
-      { config, ... }:
+      { config, pkgs, ... }:
       {
         sops.secrets.talianappin-password.neededForUsers = true;
 

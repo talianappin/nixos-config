@@ -16,6 +16,7 @@
       includes = [
         <sys/devices/base>
         <sys/wayland/niri>
+	<sys/wayland/cliphist>
 	<sys/dm/ly>
       ];
     };

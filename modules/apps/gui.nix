@@ -20,6 +20,7 @@
       fuzzel
       bisq2
       heroic
+      discord
     ];
   };
 }

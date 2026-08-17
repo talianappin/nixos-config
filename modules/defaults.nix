@@ -29,8 +29,11 @@
         };
         console.keyMap = "pl";
         
-        home-manager.useUserPackages = true;
-        home-manager.useGlobalPkgs = true;
+        home-manager = {
+	  useUserPackages = true;
+          useGlobalPkgs = true;
+	  backupFileExtension = "old";
+	};
 
 	nix = {
           settings = {

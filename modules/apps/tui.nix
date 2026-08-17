@@ -5,7 +5,6 @@
       home.packages = with pkgs; [
         kew
         fastfetch
-        yazi
         bottom
         astroterm
         gurk-rs
