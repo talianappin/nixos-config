@@ -17,7 +17,8 @@
         <sys/devices/base>
         <sys/wayland/niri>
 	<sys/wayland/cliphist>
-	<sys/dm/ly>
+	<sys/wayland/noctalia>
+#	<sys/dm/ly>
       ];
     };
 

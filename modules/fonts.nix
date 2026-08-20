@@ -8,7 +8,7 @@
           inter
           aleo-fonts
           nerd-fonts._3270
-	  noto-fonts-color-emoji
+	  openmoji-color
         ];
         enableDefaultPackages = true;
         fontDir.enable = true;
@@ -16,7 +16,7 @@
           sansSerif = ["Inter"];
           serif = ["Aleo"];
           monospace = ["3270 Nerd Font"];
-          emoji = ["Noto Color Emoji"];
+	  emoji = [ "OpenMoji Color" ];
         };
       };
     };

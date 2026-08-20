@@ -1,14 +1,39 @@
+{ inputs, ... }:
 {
   sys.wayland._.niri =
   {
-    nixos = {
+    nixos =
+    { pkgs, ... }:
+    {
       programs.niri.enable = true;
-      niri-flake.cache.enable = true;
+      services = {
+        accounts-daemon.enable = true;
+        greetd.settings.default_session.user = "talianappin";
+      };
+      environment = {
+        # fixes zap proxy
+        # making gui apps with java should be banned.
+        variables.AWT_TOOLKIT = "MToolkit";
+        variables._JAVA_AWT_WM_NONREPARENTING = 1;
+        systemPackages = with pkgs; [
+          xwayland-satellite
+          file-roller
+          nautilus
+          satty
+          celluloid
+          loupe
+          dsearch
+          pwvucontrol
+          bazaar
+        ];
+      };
     };
     homeManager =
-    { pkgs, config, ... }:
+    { config, ... }:
     {
-      home.packages = with pkgs; [ xwayland-satellite ];
+#      imports = [ inputs.niri.homeModules.config ];
+      dconf.settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+      xdg.autostart.enable = true;
       programs.niri.settings = {
 	prefer-no-csd = true;
 	input = {

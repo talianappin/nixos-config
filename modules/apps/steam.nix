@@ -9,6 +9,7 @@
     programs = {
       steam = {
         enable = true;
+	package = pkgs.millennium-steam;
         extraCompatPackages = [ pkgs.proton-ge-bin ];
         remotePlay.openFirewall = true;
         localNetworkGameTransfers.openFirewall = true;

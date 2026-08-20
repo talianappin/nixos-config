@@ -13,7 +13,11 @@
 	  niri.nixosModules.niri
         ];
 
-        nixpkgs.config.allowUnfree = true;
+        nixpkgs =
+	{
+	  config.allowUnfree = true;
+	  overlays = [ inputs.millennium.overlays.default ];
+	};
 
         users.mutableUsers = false;
 
@@ -24,7 +28,7 @@
 
         services.xserver.xkb = {
           layout = "pl";
-          variant = "";
+          variant = "prog";
         };
         console.keyMap = "pl";
         

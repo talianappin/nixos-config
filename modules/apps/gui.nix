@@ -5,16 +5,18 @@
   {
     home.packages = with pkgs; [
       librewolf
+
+      #audio, both for now
       pavucontrol
+      helvum
+
       nicotine-plus
       droidcam
       spotify
       nautilus #temp
-      parsec-bin
       obsidian
       freecad
       qbittorrent
-      libresprite
       signal-desktop
       libreoffice-qt
       fuzzel

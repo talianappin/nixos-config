@@ -3,7 +3,7 @@
   den.hosts.x86_64-linux.johnny = {
     users.talianappin.classes = [ "homeManager" ];
   };
-  den.aspects.johnny = {
+  den.aspects.talianappin = {
     includes = [
       <sys/devices/desktop>
     ];

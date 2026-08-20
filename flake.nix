@@ -25,8 +25,23 @@
       url = "github:misterio77/nix-colors";
       inputs.nixpkgs-lib.follows = "flake-parts/nixpkgs-lib";
     };
+ 
+    niri = {
+      url = "github:epireyn/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
 
-    niri.url = "github:epireyn/niri-flake";
+    };
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    noctalia-greeter = {
+      url = "github:noctalia-dev/noctalia-greeter";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
   };
 }
 

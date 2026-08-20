@@ -6,7 +6,11 @@
       {
         programs = {
           fish = {
-	    enable = true;  
+	    enable = true;
+	    plugins = 
+	    [
+	      { name = "tide"; src = pkgs.fishPlugins.tide.src; }
+	    ];
           };
           foot = {
             enable = true;
