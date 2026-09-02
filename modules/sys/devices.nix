@@ -16,13 +16,12 @@
       includes = [
         <sys/devices/base>
         <sys/wayland/niri>
-	<sys/wayland/cliphist>
-	<sys/wayland/noctalia>
-#	<sys/dm/ly>
+        <sys/wayland/cliphist>
+	      <sys/wayland/noctalia>
       ];
     };
 
-    server = den.lib.parametric.atLeast {
+    pi3b = den.lib.parametric.atLeast {
       includes = [
         <sys/devices/base>
         <sys/networking/server>

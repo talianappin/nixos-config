@@ -1,0 +1,16 @@
+{
+  den.aspects.johnny.nixos = {
+    fileSystems."/" = {
+      device = "/dev/disk/by-label/NIXROOT";
+      fsType = "btrfs";
+    };
+
+    fileSystems."/boot/efi" = {
+      device = "/dev/disk/by-label/NIXBOOT";
+      fsType = "vfat";
+      options = [ "fmask=0077" "dmask=0077" ];
+    };
+
+    services.btrfs.autoScrub.enable = true;
+  };
+}

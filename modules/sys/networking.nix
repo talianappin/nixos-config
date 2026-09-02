@@ -15,6 +15,12 @@
     };
     server = den.lib.parametric {
       includes = [ sys.networking._.base ];
+
+      services.openssh =
+      {
+        enable = true;
+        
+      }
     };
   };
 }
