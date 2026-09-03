@@ -1,6 +1,7 @@
 {  inputs, ... }:
 {
-  apps.steam.nixos =
+  apps.steam = {
+  nixos =
   { pkgs, ... }:
   {
     boot.kernelModules = [ "ntsync" ]; #proton optimization
@@ -16,5 +17,17 @@
       };
       gamescope.enable = true;
     };
+    # tmp
+    services.hardware.openrgb.enable = true;
+  };
+  homeManager =
+  { pkgs, ... }:
+  {
+    home.packages = with pkgs; [
+      protontricks
+      protonup-qt
+      steamtinkerlaunch
+    ];
+  };
   };
 }

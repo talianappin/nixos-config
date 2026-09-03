@@ -24,8 +24,7 @@
           loupe
           dsearch
           pwvucontrol
-          bazaar
-        ];
+	];
       };
     };
     homeManager =
@@ -35,6 +34,7 @@
       dconf.settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
       xdg.autostart.enable = true;
       programs.niri.settings = {
+        cursor.size = 12;
 	prefer-no-csd = true;
 	input = {
 	  keyboard = {

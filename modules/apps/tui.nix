@@ -7,8 +7,6 @@
         fastfetch
         bottom
         astroterm
-        gurk-rs
-        neomutt
 	cava
       ];
     };

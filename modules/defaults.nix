@@ -1,9 +1,9 @@
-{ inputs, __findFile, ... }:
+{ inputs, __findFile, den, ... }:
 {
   den.default = {
     includes = [
       <den/define-user>
-      <den/hostname> 
+      <den/hostname>
     ];
     nixos =
       { pkgs, lib, ... }:
@@ -15,7 +15,11 @@
 
         nixpkgs =
 	{
-	  config.allowUnfree = true;
+	  config = 
+	  {
+	    allowUnfree = true;
+	    allowUnsupportedSystem = true;
+	  };
 	  overlays = [ inputs.millennium.overlays.default ];
 	};
 
@@ -44,6 +48,7 @@
             keep-derivations = true;
 	    auto-optimise-store = true;
 	    experimental-features = [ "nix-command" "flakes" ];
+	    extra-platforms = [ "aarch64-linux" ];
 	  };
           package = pkgs.lixPackageSets.stable.lix;
         };

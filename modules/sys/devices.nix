@@ -3,9 +3,7 @@
   sys.devices.provides = {
     base = den.lib.parametric.atLeast {
       includes = [
-        <sys/boot>
         <sys/networking/base>
-        <sys/bluetooth>
         <sys/audio>
         <sys/fonts>
         <sys/usb>
@@ -14,16 +12,20 @@
     
     desktop = den.lib.parametric.atLeast {
       includes = [
+        <sys/boot/desktop>
+	<sys/emulate>
         <sys/devices/base>
+	<sys/bluetooth>
         <sys/wayland/niri>
         <sys/wayland/cliphist>
-	      <sys/wayland/noctalia>
+	<sys/wayland/noctalia>
       ];
     };
 
-    pi3b = den.lib.parametric.atLeast {
+    pi = den.lib.parametric.atLeast {
       includes = [
-        <sys/devices/base>
+        <sys/boot/pi>
+	<sys/devices/base>
         <sys/networking/server>
       ];
     };

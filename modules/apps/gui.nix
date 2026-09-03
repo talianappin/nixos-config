@@ -23,6 +23,8 @@
       bisq2
       heroic
       discord
+      openrgb
+
     ];
   };
 }

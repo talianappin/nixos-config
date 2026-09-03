@@ -1,18 +1,19 @@
 { den, sys, __findFile, inputs, ... }:
 {
   den.hosts.aarch64-linux.mista = {
-    users.number-four.classes = [ ];
+    users.number-four.classes = [ "wheel" "homeManager" ];
   };
   den.aspects.number-four = {
     includes = [
-      <sys/devices/pi3b>
+      <sys/devices/pi>
     ];
 
     nixos = 
     { config, pkgs, ... }:
     {
       imports = with inputs; [
-        nixos-hardware.nixosModules.raspberry-pi-3
+        "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix"
+        nixos-hardware.nixosModules.raspberry-pi-4
       ];
     };
   };

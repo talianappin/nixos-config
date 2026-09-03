@@ -1,16 +1,10 @@
+{ lib, ... }:
 {
-  den.aspects.johnny.nixos = {
-    fileSystems."/" = {
-      device = "/dev/disk/by-label/NIXROOT";
-      fsType = "btrfs";
+  den.aspects.mista.nixos = {
+    fileSystems."/" = lib.mkForce {
+      device = "/dev/disk/by-label/NIXSD";
+      fsType = "ext4";
+      options = [ "noatime" ];
     };
-
-    fileSystems."/boot/efi" = {
-      device = "/dev/disk/by-label/NIXBOOT";
-      fsType = "vfat";
-      options = [ "fmask=0077" "dmask=0077" ];
-    };
-
-    services.btrfs.autoScrub.enable = true;
   };
 }
