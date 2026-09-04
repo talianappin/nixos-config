@@ -17,6 +17,8 @@
       <apps/games>
       <apps/nvim>
       <apps/yazi>
+      <apps/spicetify>
+      <apps/nixcord>
     ];
 
     nixos =

@@ -42,6 +42,10 @@
     };
 
     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+
+    nixcord.url = "github:4evy/nixcord";
   };
 }
 

@@ -34,7 +34,7 @@
       dconf.settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
       xdg.autostart.enable = true;
       programs.niri.settings = {
-        cursor.size = 12;
+        cursor.size = 8;
 	prefer-no-csd = true;
 	input = {
 	  keyboard = {
@@ -51,7 +51,7 @@
 	    accel-speed = 0;
 	  };
 #	  workspace-auto-back-and-forth = true;
-          focus-follows-mouse.enable = true;
+          focus-follows-mouse.enable = false;
 	};
 	outputs = {
 	  "HDMI-A-1" = {
@@ -67,36 +67,71 @@
             background-color = "#000000";
 	  };
 	};
-	layout = {
-          gaps = 8;
+	layout =
+	{
+	  background-color = "transparent";
+          gaps = 192;
 	  empty-workspace-above-first = true;
-	  focus-ring = {
+	  struts = 
+	  {
+	    top = -86;
+	    bottom = -86;
+	    left = 0;
+	    right = 0;
+	  };
+	  focus-ring =
+	  {
 	    enable = true;
             width = 2;
-	    active.color = "#${config.colorScheme.palette.base02}";
-	    urgent.color = "#${config.colorScheme.palette.base01}";
 	  };
-	  default-column-width = { proportion = 0.5; };
+	  default-column-width = { proportion = 1.0; };
 	};
+	window-rules =
+	[
+	  {
+	    draw-border-with-background = false;
+	    geometry-corner-radius = 
+	    {
+	      top-left = 10.0;
+	      top-right = 10.0;
+	      bottom-left = 10.0;
+	      bottom-right = 10.0;
+	    };
+	    clip-to-geometry = true;
+	  }
+	];
+	layer-rules = 
+	[
+	  {
+	    matches = 
+	    [
+              { namespace = "^noctalia-wallpaper"; }
+	    ];
+            place-within-backdrop = true;
+	  }
+	];
 	binds = {
           "Mod+T".action.spawn = "foot";
-          "Mod+D".action.spawn = "fuzzel";
+          "Mod+Space".action.spawn-sh = "noctalia msg panel-toggle launcher";
           "Mod+Q".action.close-window = [];
 	  "Mod+E".action.spawn = ["foot" "yazi"];
       
-          "Mod+Left".action.focus-column-left = [];
-          "Mod+Right".action.focus-column-right = [];
-          "Mod+Up".action.focus-workspace-up = [];
-          "Mod+Down".action.focus-workspace-down = [];
+          "Mod+A".action.focus-column-left = [];
+          "Mod+D".action.focus-column-right = [];
+          "Mod+W".action.focus-workspace-up = [];
+          "Mod+S".action.focus-workspace-down = [];
 
-	  "Mod+Ctrl+Left".action.move-column-left = [];
-          "Mod+Ctrl+Right".action.move-column-right = [];
-          "Mod+Ctrl+Up".action.move-column-to-workspace-up = [];
-          "Mod+Ctrl+Down".action.move-column-to-workspace-down = [];
+	  "Mod+Ctrl+A".action.move-column-left = [];
+          "Mod+Ctrl+D".action.move-column-right = [];
+          "Mod+Ctrl+W".action.move-column-to-workspace-up = [];
+          "Mod+Ctrl+S".action.move-column-to-workspace-down = [];
 
 	  "Mod+F".action.maximize-column = [];
-#	   "Mod+Ctrl+F".action.maximize-window-to-edges = [];  v25.11 feature (on v25.08)
+	  "Mod+Ctrl+F".action.maximize-window-to-edges = [];
 	  "Mod+Shift+F".action.fullscreen-window = [];
+
+          "Mod+X".action.spawn-sh = "noctalia msg panel-toggle session";
+	  "Mod+Tab".action.spawn-sh = "noctalia msg wallpaper-next";
 
 	  "XF86AudioRaiseVolume" = {
             action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"];

@@ -12,7 +12,6 @@
 
       nicotine-plus
       droidcam
-      spotify
       nautilus #temp
       obsidian
       freecad
@@ -22,7 +21,6 @@
       fuzzel
       bisq2
       heroic
-      discord
       openrgb
 
     ];

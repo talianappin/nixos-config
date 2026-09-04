@@ -8,6 +8,7 @@
         bottom
         astroterm
 	cava
+	bitwarden-cli
       ];
     };
 }
