@@ -11,7 +11,7 @@
 
       # I HATE THIS BUT I NEED THIS (for wallpaper depth);
 #      home.packages = with pkgs;
-#       [
+#      [
 #        (python311.withPackages (python-pkgs: with python-pkgs; 
 #	  [
 #	    pip

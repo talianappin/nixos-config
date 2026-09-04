@@ -3,7 +3,6 @@
   sys.wayland._.niri =
   {
     nixos =
-    { pkgs, ... }:
     {
       programs.niri.enable = true;
       services = {
@@ -15,26 +14,25 @@
         # making gui apps with java should be banned.
         variables.AWT_TOOLKIT = "MToolkit";
         variables._JAVA_AWT_WM_NONREPARENTING = 1;
-        systemPackages = with pkgs; [
-          xwayland-satellite
-          file-roller
-          nautilus
-          satty
-          celluloid
-          loupe
-          dsearch
-          pwvucontrol
-	];
       };
     };
     homeManager =
-    { config, ... }:
+    { config, pkgs, ... }:
     {
+      home.packages = with pkgs;
+      [
+        xwayland-satellite
+	numix-cursor-theme
+      ];
 #      imports = [ inputs.niri.homeModules.config ];
       dconf.settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
       xdg.autostart.enable = true;
       programs.niri.settings = {
-        cursor.size = 8;
+        cursor =
+	{
+	  size = 16;
+	  theme = "Numix-Cursor";
+	};
 	prefer-no-csd = true;
 	input = {
 	  keyboard = {
