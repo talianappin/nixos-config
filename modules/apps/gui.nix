@@ -22,7 +22,7 @@
       bisq2
       heroic
       openrgb
-
+      alacritty
     ];
   };
 }

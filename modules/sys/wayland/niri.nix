@@ -28,6 +28,9 @@
       dconf.settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
       xdg.autostart.enable = true;
       programs.niri.settings = {
+      	workspaces."media" = {};
+      	workspaces."chat" = {};
+        workspaces."browser" = {};
         cursor =
 	{
 	  size = 16;
@@ -52,7 +55,7 @@
           focus-follows-mouse.enable = false;
 	};
 	outputs = {
-	  "HDMI-A-1" = {
+	  "HDMI-A-2" = {
 	    mode = {
 	      width = 1920;
 	      height = 1080;
@@ -96,6 +99,30 @@
 	      bottom-right = 10.0;
 	    };
 	    clip-to-geometry = true;
+	  }
+	  {
+	    matches =
+	    [
+	      { app-id = "signal"; }
+	      { app-id = "vesktop"; }
+	    ];
+	    open-on-workspace = "chat";
+	  }
+	  {
+	    matches = 
+	    [
+	      { app-id = "steam"; }
+	      { app-id = "org.prismlauncher.PrismLauncher"; }
+	      { app-id = "Spotify"; }
+	    ];
+	    open-on-workspace = "media";
+	  }
+	  {
+	    matches = 
+	    [
+	      { app-id = "librewolf"; }
+	    ];
+	    open-on-workspace = "browser";
 	  }
 	];
 	layer-rules = 
