@@ -1,9 +1,9 @@
 { den, sys, __findFile, inputs, ... }:
 {
   den.hosts.x86_64-linux.johnny = {
-    users.talianappin.classes = [ "homeManager" ];
+    users.catalia.classes = [ "homeManager" ];
   };
-  den.aspects.talianappin = {
+  den.aspects.catalia = {
     includes = [
       <sys/devices/desktop>
     ];

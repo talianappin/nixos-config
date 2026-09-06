@@ -5,8 +5,6 @@
       <den/primary-user>
       (<den/user-shell> "fish")
 
-      <sys/theme/johnny>
-#      <sys/dots/talianappin>
       <sys/secrets>
 
       <apps/shell>
@@ -17,8 +15,6 @@
     nixos =
       { config, ... }:
       {
-#        sops.secrets.talianappin-password.neededForUsers = true;
-
         users.users.root.password = "root";
         users.users.euclid.password = "test";
       };

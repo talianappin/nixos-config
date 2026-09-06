@@ -7,7 +7,7 @@
       programs.niri.enable = true;
       services = {
         accounts-daemon.enable = true;
-        greetd.settings.default_session.user = "talianappin";
+        greetd.settings.default_session.user = "catalia";
       };
       environment = {
         # fixes zap proxy

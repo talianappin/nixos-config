@@ -8,7 +8,7 @@
       programs.noctalia-greeter =
       {
         enable = true;
-	passwordless-sync-users = [ "talianappin" ];
+	passwordless-sync-users = [ "catalia" ];
 	settings =
 	{
 	  appearance.hide_logo = true;
