@@ -12,17 +12,14 @@
 
       nicotine-plus
       droidcam
-      nautilus #temp
       obsidian
       freecad
       qbittorrent
       signal-desktop
       libreoffice-qt
-      fuzzel
       bisq2
       heroic
       openrgb
-      alacritty
     ];
   };
 }

@@ -8,11 +8,22 @@
           efiSysMountPoint = "/boot/efi";
         };
         grub = {
-          enable = true;
+          enable = false;
           efiSupport = true;
           device = "nodev";
         };
         systemd-boot.enable = false;
+	limine =
+	{
+	  enable = true;
+	  efiSupport = true;
+	  maxGenerations = 5;
+	  style = 
+	  {
+	    wallpapers = [ (inputs.self + "/assets/default.jpg") ];
+	    wallpaperStyle = "stretched";
+	  };
+	};
       };
     };
     pi = {

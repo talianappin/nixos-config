@@ -13,7 +13,6 @@
 	[
 	  # official
 	  "noctalia/timer"
-	  "noctalia/wallpaper_depth"
 	  "noctalia/bitwarden"
 
 	  # community

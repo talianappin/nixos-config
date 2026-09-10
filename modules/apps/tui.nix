@@ -5,10 +5,11 @@
       home.packages = with pkgs; [
         kew
         fastfetch
-        bottom
+        zenith
         astroterm
 	cava
 	bitwarden-cli
+	moji
       ];
     };
 }

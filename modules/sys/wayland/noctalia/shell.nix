@@ -3,6 +3,7 @@
   {
     homeManager.programs.noctalia.settings = 
     {
+      hot_corners.enabled = false;
       shell = 
       {
         niri_overview_type_to_launch_enabled = true;
@@ -53,6 +54,24 @@
 	      variant = "outline";
 	    }
 	  ];
+	};
+	launcher.dmenu.entry.nixos-rebuild = 
+	{
+	  command = "printf 'switch\nboot\ntest\n'";
+	  label = "nixos-rebuild";
+	  prefix = "nixos";
+	  glyph = "terminal";
+	  global = false;
+	  exec = "foot sudo nixos-rebuild \"{query}\" -F /etc/nixos/.#johnny";
+	};
+	launcher.dmenu.entry.flake =
+	{
+	  command = "printf 'update'";
+	  label = "nix flake";
+	  prefix = "flake";
+	  glyph = "terminal";
+	  global = false;
+	  exec = "foot nix flake update --flake /etc/nixos";
 	};
       };
     };
