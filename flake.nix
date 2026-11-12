@@ -42,10 +42,17 @@
     };
 
     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+    proton-cachyos =
+    {
+      url = "github:Daaboulex/proton-cachyos-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
     nixcord.url = "github:4evy/nixcord";
+
+    nixvim.url = "github:nix-community/nixvim";
   };
 }
 

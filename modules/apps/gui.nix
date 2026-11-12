@@ -11,15 +11,27 @@
       helvum
 
       nicotine-plus
-      droidcam
       obsidian
       freecad
       qbittorrent
       signal-desktop
+
+      #libreoffice + spellcheck
       libreoffice-qt
+      hunspell
+      hunspellDicts.pl_PL
+
       bisq2
       heroic
       openrgb
+
+      #file manager
+      krusader
+      nautilus
+
+      source2viewer-cli
+      vpkedit
+
     ];
   };
 }

@@ -8,5 +8,6 @@
     (inputs.den.namespace "sys" true)
     (inputs.den.namespace "apps" true)
     (inputs.den.namespace "noctalia" true)
+    (inputs.den.namespace "nvim" true)
   ];
 }

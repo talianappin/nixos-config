@@ -17,10 +17,11 @@
       <apps/yazi>
       <apps/spicetify>
       <apps/nixcord>
+      <apps/fastfetch>
     ];
 
     nixos =
-      { config, pkgs, ... }:
+      { config, ... }:
       {
         sops.secrets.catalia-password.neededForUsers = true;
 

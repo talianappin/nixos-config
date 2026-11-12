@@ -25,8 +25,7 @@
       };
 
       boot = {
-        # Make v4l2loopback kernel module available to NixOS.
-        extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
+        # Make v4l2loopback kernel module available to NixOS.	extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
         # Activate kernel module(s).
         kernelModules = [ "v4l2loopback" "snd-aloop" ];
       

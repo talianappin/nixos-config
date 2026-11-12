@@ -7,6 +7,7 @@
       mangohud
       deadlock-mod-manager
       prismlauncher
+      lutris
     ];
   };
 }

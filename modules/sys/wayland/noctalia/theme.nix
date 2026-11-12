@@ -10,9 +10,13 @@
 	  directory = inputs.self + "/assets";
 	  transition = "disc";
 	  default =
-	    {
-	      path = inputs.self + "assets/default.jpg";
-	    };
+	  {
+	    path = inputs.self + "assets/default.jpg";
+	  };
+	  backdrop =
+	  {
+	    enabled = false;
+	  };
       };
       theme =
       {

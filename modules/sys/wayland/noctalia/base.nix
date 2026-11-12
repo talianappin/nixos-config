@@ -1,4 +1,4 @@
-{ inputs, noctalia, den, ... }:
+{ inputs, noctalia, ... }:
 {
   sys.wayland._.noctalia =
   {

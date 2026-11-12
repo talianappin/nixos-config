@@ -17,6 +17,7 @@
 	exfat
 	usbutils
 	caligula
+	unzip
       ];
     };
 }

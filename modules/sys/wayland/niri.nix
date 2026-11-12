@@ -41,7 +41,6 @@
 	  keyboard = {
 	    xkb = {
 	      layout = "pl";
-	      variant = "qwerty";
 	    };
             track-layout = "global";
             repeat-delay = 600;

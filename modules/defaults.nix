@@ -20,7 +20,7 @@
 	    allowUnfree = true;
 	    allowUnsupportedSystem = true;
 	  };
-	  overlays = [ inputs.millennium.overlays.default ];
+	  overlays = with inputs; [ millennium.overlays.default proton-cachyos.overlays.default ];
 	};
 
         users.mutableUsers = false;
@@ -30,16 +30,17 @@
 
         system.stateVersion = "26.05";
 
-        services.xserver.xkb = {
-          layout = "pl";
-          variant = "prog";
-        };
+        services.xserver.xkb.layout = "pl";
         console.keyMap = "pl";
         
         home-manager = {
 	  useUserPackages = true;
           useGlobalPkgs = true;
 	  backupFileExtension = "old";
+	};
+
+	environment.variables = {
+    	  XKB_DEFAULT_LAYOUT = "pl";
 	};
 
 	nix = {

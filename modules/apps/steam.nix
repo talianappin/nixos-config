@@ -11,7 +11,7 @@
       steam = {
         enable = true;
 	package = pkgs.millennium-steam;
-        extraCompatPackages = [ pkgs.proton-ge-bin ];
+        extraCompatPackages = with pkgs; [ proton-ge-bin proton-cachyos ];
         remotePlay.openFirewall = true;
         localNetworkGameTransfers.openFirewall = true;
       };
