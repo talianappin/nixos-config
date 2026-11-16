@@ -5,7 +5,7 @@
   {
     home.packages = with pkgs; [
       mangohud
-      deadlock-mod-manager
+      #deadlock-mod-manager
       prismlauncher
       lutris
     ];

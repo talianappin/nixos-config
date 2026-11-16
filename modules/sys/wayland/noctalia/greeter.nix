@@ -1,22 +1,17 @@
-{ inputs, ... }:
 {
   noctalia.greeter = 
   {
-    nixos = 
+    nixos.services.displayManager.noctalia-greeter =
     {
-      imports = [ inputs.noctalia-greeter.nixosModules.default ];
-      programs.noctalia-greeter =
+      enable = true;
+      passwordlessSyncUsers = [ "catalia" ];
+      settings =
       {
-        enable = true;
-	passwordless-sync-users = [ "catalia" ];
-	settings =
-	{
-	  appearance.hide_logo = true;
-	  cursor = {
-            theme = "Numix-Cursor";
-            size = 16;
-    	  };
-        };
+	appearance.hide_logo = true;
+	cursor = {
+          theme = "Numix-Cursor";
+          size = 16;
+    	};
       };
     };
   };

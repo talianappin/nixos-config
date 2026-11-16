@@ -15,7 +15,7 @@
       <apps/games>
       <apps/nvim>
       <apps/yazi>
-      <apps/spicetify>
+      #<apps/spicetify>
       <apps/nixcord>
       <apps/fastfetch>
     ];

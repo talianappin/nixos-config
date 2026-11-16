@@ -8,15 +8,8 @@
       {
 	  enabled = true;
 	  directory = inputs.self + "/assets";
-	  transition = "disc";
-	  default =
-	  {
-	    path = inputs.self + "assets/default.jpg";
-	  };
-	  backdrop =
-	  {
-	    enabled = false;
-	  };
+	  transition_on_startup = false;
+	  default.path = inputs.self + "assets/default.jpg";
       };
       theme =
       {

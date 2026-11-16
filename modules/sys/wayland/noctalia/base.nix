@@ -9,7 +9,7 @@
       shell
       theme
       bar
-      desktop
+      #desktop
     ];
     homeManager =
     {

@@ -1,4 +1,4 @@
-{ inputs, __findFile, den, ... }:
+{ inputs, __findFile, den,  ... }:
 {
   den.default = {
     includes = [
@@ -6,7 +6,7 @@
       <den/hostname>
     ];
     nixos =
-      { pkgs, lib, ... }:
+      { pkgs,  ... }:
       {
         imports = with inputs; [
           nixos-facter-modules.nixosModules.facter
@@ -50,6 +50,8 @@
 	    auto-optimise-store = true;
 	    experimental-features = [ "nix-command" "flakes" ];
 	    extra-platforms = [ "aarch64-linux" ];
+	    extra-substituters = [ "https://noctalia.cachix.org" ];
+            extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
 	  };
           package = pkgs.lixPackageSets.stable.lix;
         };
